@@ -1,5 +1,5 @@
 console.log('ok js');
-// di seguito oggetti, uno per membro. Oggetto= variabile con attributi
+// di seguito oggetti, uno per membro. Oggetto= variabile con key definite nelle graffe
 const wayneBarnett = {
     name: 'Wayne Barnett',
     role: 'Founder & CEO',
@@ -43,13 +43,68 @@ const gordonFreeman = {
 
 
 
-/*sotto per richiamare un attributo di un oggetto: scrivere nome ogetto seguito da punto e attributo (dot notation), 
+/*sotto per richiamare una key di un oggetto: scrivere nome ogetto seguito da punto e key (dot notation), 
 possibile concatenare più attributi usando la virgola
 (gli apici con gli spazi servono ad inserire un distanziamento per rendere piu leggibile in console)*/
 console.log(angelaLopez.role, '     ', angelaLopez.propic);
 
-// array (lista) contentente gli ogetti
+// array (lista) contentente gli ogetti definiti precedentemente
 const staffInfo = [wayneBarnett, angelaCaroll, walterGordon, angelaLopez, scottEstrada, barbaraRamos, gordonFreeman];
 console.log(staffInfo);
 // per aggiungere un attributo a un ogetto
 gordonFreeman.custom = "TRUE";
+//array (lista) contentente gli ogetti che vengono definiti all'interno delle graffe
+const team = [
+    {
+        name: 'Wayne Barnett',
+        role: 'Founder & CEO',
+        propic: 'wayne-barnett-founder-ceo.jpg',
+    },
+    {
+        name: 'Angela Caroll',
+        role: 'Chief Editor',
+        propic: 'angela-caroll-chief-editor.jpg',
+    },
+    {
+        name: 'Walter Gordon',
+        role: 'Office Manager',
+        propic: 'walter-gordon-office-manager.jpg',
+    },
+    {
+        name: 'Angela Lopez',
+        role: 'Social Media Manager',
+        propic: 'angela-lopez-social-media-manager.jpg',
+    },
+    {
+        name: 'Scott Estrada',
+        role: 'Developer',
+        propic: 'scott-estrada-developer.jpg',
+    },
+    {
+        name: 'Barbara Ramos',
+        role: 'Graphic Designer',
+        propic: 'barbara-ramos-graphic-designer.jpg',
+    },
+    {
+        name: 'Gordon Freeman',
+        role: 'theoretical physicist',
+        propic: 'barbara-ramos-graphic-designer.jpg',
+    },
+];
+console.log(team);
+
+for (let staffIndex = 0; staffIndex < team.length; staffIndex++) {
+    const staff = team[staffIndex];
+    //console.log(staff.role);per visualizzare la singola key
+    console.log(staff.name, staff.role, staff.propic);//per visualizzare tutte 
+
+    // console.log(team.name);  non funziona perché team non è un ogetto ma un array di ogetti, è necessario dunque ciclare con for come sopra scritto
+
+    const listTeam = document.getElementById('team');
+    listTeam.innerHTML += `<div>
+<div>${staff.name}</div>
+<div>${staff.role}</div>
+<div> ${staff.propic}</div>
+</div>
+`
+}
