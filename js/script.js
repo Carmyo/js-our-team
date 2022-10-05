@@ -99,7 +99,7 @@ const team = [
     },
 ];
 console.log(team);
-
+// con la funzione sottostante debbo categoricamente cliccare 2 volte, vorrei ottenere lo stesso effetto al singolo click
 function showCard() {
     let i = document.getElementById("container");
     if (i.style.display === "none") {
