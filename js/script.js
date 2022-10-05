@@ -53,6 +53,13 @@ const staffInfo = [wayneBarnett, angelaCaroll, walterGordon, angelaLopez, scottE
 console.log(staffInfo);
 // per aggiungere un attributo a un ogetto
 gordonFreeman.custom = "TRUE";
+
+
+
+
+// ***********  SOLTANTO QUANTO SEGUE VERRÀ MOSTRATO IN PAGINA  *********** //
+
+
 //array (lista) contentente gli ogetti che vengono definiti all'interno delle graffe
 const team = [
     {
@@ -88,7 +95,7 @@ const team = [
     {
         name: 'Gordon Freeman',
         role: 'theoretical physicist',
-        propic: 'barbara-ramos-graphic-designer.jpg',
+        propic: 'gordon-freeman-theoretical physicist.jpg',
     },
 ];
 console.log(team);
@@ -104,7 +111,8 @@ for (let staffIndex = 0; staffIndex < team.length; staffIndex++) {
     listTeam.innerHTML += `<div>
 <div>${staff.name}</div>
 <div>${staff.role}</div>
-<div> ${staff.propic}</div>
+<img src="img/${staff.propic}"/> 
 </div>
 `
 }
+// ssopra in img non è necesssario sspecificare il percorso completo perchè si autocompleta ciclando sulla key e io che stavo impazzendo
