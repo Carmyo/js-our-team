@@ -118,11 +118,14 @@ for (let staffIndex = 0; staffIndex < team.length; staffIndex++) {
 
     const listTeam = document.getElementById('team');
     listTeam.innerHTML += `<div class="card my-5 ">
-<div class="info text-center">${staff.name}</div>
-<div class="info text-center">${staff.role}</div>
-<img class="info text-center" src="img/${staff.propic}"/> 
+    <div class="infoContainer rounded">
+         <div class="info text-center ">${staff.name}</div>
+         <div class="info text-center">${staff.role}</div>
+    </div>
+<img class="text-center" src="img/${staff.propic}"/> 
+
 </div>
 `
 }
-// ssopra in img non è necesssario sspecificare il percorso completo perchè si autocompleta ciclando sulla key e io che stavo impazzendo
+// sopra in img non è necesssario sspecificare il percorso completo perchè si autocompleta ciclando sulla key e io che stavo impazzendo
 
