@@ -1,5 +1,23 @@
 #team {
     max-width: 1200px;
     margin: 0 auto;
-    color: red;
+
+}
+
+.info {
+    color: blue;
+}
+
+
+
+#container {
+    background-color: brown;
+    display: none;
+}
+
+.card {}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
 }

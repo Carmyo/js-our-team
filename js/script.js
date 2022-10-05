@@ -94,11 +94,20 @@ const team = [
     },
     {
         name: 'Gordon Freeman',
-        role: 'theoretical physicist',
+        role: 'Theoretical physicist',
         propic: 'gordon-freeman-theoretical physicist.jpg',
     },
 ];
 console.log(team);
+
+function showCard() {
+    let i = document.getElementById("container");
+    if (i.style.display === "none") {
+        i.style.display = "block";
+    } else {
+        i.style.display = "none";
+    }
+}
 
 for (let staffIndex = 0; staffIndex < team.length; staffIndex++) {
     const staff = team[staffIndex];
@@ -108,11 +117,12 @@ for (let staffIndex = 0; staffIndex < team.length; staffIndex++) {
     // console.log(team.name);  non funziona perché team non è un ogetto ma un array di ogetti, è necessario dunque ciclare con for come sopra scritto
 
     const listTeam = document.getElementById('team');
-    listTeam.innerHTML += `<div>
-<div>${staff.name}</div>
-<div>${staff.role}</div>
-<img src="img/${staff.propic}"/> 
+    listTeam.innerHTML += `<div class="card my-5 ">
+<div class="info text-center">${staff.name}</div>
+<div class="info text-center">${staff.role}</div>
+<img class="info text-center" src="img/${staff.propic}"/> 
 </div>
 `
 }
 // ssopra in img non è necesssario sspecificare il percorso completo perchè si autocompleta ciclando sulla key e io che stavo impazzendo
+
