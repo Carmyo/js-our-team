@@ -119,7 +119,7 @@ for (let staffIndex = 0; staffIndex < team.length; staffIndex++) {
     const listTeam = document.getElementById('team');
     listTeam.innerHTML += `<div class="card my-5 ">
     <div class="infoContainer rounded">
-         <div class="info text-center ">${staff.name}</div>
+         <div class="info text-center">${staff.name}</div>
          <div class="info text-center">${staff.role}</div>
     </div>
 <img class="text-center" src="img/${staff.propic}"/> 
